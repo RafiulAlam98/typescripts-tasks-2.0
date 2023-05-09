@@ -64,7 +64,43 @@ Example:
 let adminId: any = 111;   
 let admin_id= adminId as number;   
 
+7. Can you explain how to use "type guards" with "in" and "typeof" operators in TypeScript?
+
+Ans: Type guards are used to determine a variable's type,inside a conditional or functional block. The type guards takes the variables and return a Boolean value or the variable type. 
+In TypeScript, typeof operator is used to get the type of the variable. variable of the return type are like: Number, String, Boolean, Object etc.
+Syntax and example: 
+const stringValue = "Hello"
+
+function greetings(param:string):string{
+    if(typeof param === "string"){
+       return `${param} is a string type`
+    }
+}
+
+console.log(greetings(stringValue))
 
 
+In TypeScript, the in type guard usuaally determines the object types. It returns boolean, indicating if the property is present in the object.
 
+syntax and example:
+
+type NormalUserType = {
+        name:string,
+}
+type AdminUserType = {
+        name:string,
+        role:string
+}
+
+const getUser = (user:NormalUserType|AdminUserType):string =>{
+        if("role" in user ){
+                return `I am ${user.role}`
+        }
+        else{
+                return `I am normal user`
+        }
+} 
+
+const normalUser:NormalUserType = {name:"tonmoy"}
+const adminUser:AdminUserType = {name:"tonmoy",role:"admin"}
 
