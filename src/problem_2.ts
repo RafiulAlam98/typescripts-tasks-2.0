@@ -24,11 +24,11 @@ const data:myData[] = [
                 age:18
         },
         {
-                name:"Mohona",
+                name:"Hena",
                 age:23
         },
         {
-                name:"Mohona",
+                name:"Kona",
                 age:13
         },
 ]

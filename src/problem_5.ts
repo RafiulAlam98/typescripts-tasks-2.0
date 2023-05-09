@@ -13,5 +13,5 @@ const stringCheck:StringCheck = "Tonmoy"
 type StringCheck1= number
 const stringCheck1:StringCheck1 = 3
 
-const output = myFunc(stringCheck1)
+const output = myFunc(stringCheck)
 console.log(output)
