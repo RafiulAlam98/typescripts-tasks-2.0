@@ -1,5 +1,5 @@
-const createArray1 = <T>(param:T, ) =>{
-        return param
+const createArray1 = (...param1:string[]):string[] =>{
+        return param1.reverse()
 }
-const result1 = createArray1(["BD","EB","GH"])
+const result1 = createArray1("hello","hi", "Assalamu alaikum","bye")
 console.log(result1)
